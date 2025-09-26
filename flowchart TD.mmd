@@ -1,0 +1,15 @@
+flowchart TD
+    A[Select a food supplement for inspection] --> B{Compare ingredients with Substance Guide};
+    B -->|Yes| C[Ingredients are ok];
+    B -->|No| D[Ingredients are not ok];
+    D --> E[Non-Approved];
+    C --> F{Compare ingredients with EU's Novel Food Catalogue};s
+    F -->|Yes| G[Ingredients are ok];
+    F -->|No| H[Ingredients are not ok];
+    H --> E;
+    G --> I[Check website and product labeling for health claims];
+    I --> J{Compare health claims with EU's Register of Health Claims}
+    J -->|Yes| K[Health claims are ok];
+    J -->|No| L[Health claims are not ok];
+    K --> M[Approved];
+    L --> E;
