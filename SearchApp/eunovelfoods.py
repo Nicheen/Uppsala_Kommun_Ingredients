@@ -51,6 +51,46 @@ def fetch_all_novel_foods():
     print(f"\nTotal items fetched: {len(all_items)}")
     return all_items
 
+def create_searchable_index(foods_list):
+    """Create an index for faster searches"""
+    index = {}
+    for i, food in enumerate(foods_list):
+        # Index by name
+        name = food.get('novel_food_name', '').lower()
+        if name:
+            index[name] = index.get(name, []) + [i]
+        
+        # Index by common name
+        common_name = food.get('common_name', '')
+        if common_name:
+            common_name_lower = common_name.lower()
+            index[common_name_lower] = index.get(common_name_lower, []) + [i]
+        
+        # Index by code
+        code = food.get('policy_item_code', '').lower()
+        if code:
+            index[code] = index.get(code, []) + [i]
+        
+        # Index by synonyms (if you want to search those too)
+        synonyms = food.get('synonyms', '')
+        if synonyms:
+            synonyms_lower = synonyms.lower()
+            index[synonyms_lower] = index.get(synonyms_lower, []) + [i]
+    
+    return index
+
+# Now search is instant
+def quick_search(term, foods_list, index):
+    results = []
+    term_lower = term.lower()
+    
+    for key, indices in index.items():
+        if term_lower in key:
+            for idx in indices:
+                if foods_list[idx] not in results:
+                    results.append(foods_list[idx])
+    
+    return results
 
 if __name__ == '__main__':
     all_novel_foods = fetch_all_novel_foods()
