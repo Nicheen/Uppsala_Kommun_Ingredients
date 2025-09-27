@@ -4,7 +4,7 @@ flowchart TD
     B -->|Yes| C[Ingredients are ok];
     B -->|No| D[Ingredients are not ok];
     D --> E[Non-Approved];
-    C --> F{Compare ingredients with EU's Novel Food Catalogue};s
+    C --> F{Compare ingredients with EU's Novel Food Catalogue};
     F -->|Yes| G[Ingredients are ok];
     F -->|No| H[Ingredients are not ok];
     H --> E;

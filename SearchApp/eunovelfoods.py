@@ -79,7 +79,6 @@ def create_searchable_index(foods_list):
     
     return index
 
-# Now search is instant
 def quick_search(term, foods_list, index):
     results = []
     term_lower = term.lower()
