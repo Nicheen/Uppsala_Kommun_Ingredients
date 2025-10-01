@@ -1,0 +1,163 @@
+openapi: 3.0.1
+info:
+  title: API - Novel Food Catalog
+  description: 'The Implementing Regulation establishing the list of novel foods compiles all the authorised novel foods in the European Union to date. It includes their conditions of use, labelling requirements, and their specifications.'
+  version: v1.0
+servers:
+  - url: https://api.datalake.sante.service.ec.europa.eu/novel-food-catalog
+paths:
+  /novel-food-catalog/download:
+    get:
+      tags:
+        - hidden-configportal
+        - hidden-public
+      summary: novel-food-catalog/download
+      operationId: c9d8d877-dc13-4967-ae81-186d588f4608
+      parameters:
+        - name: format
+          in: query
+          description: Format of the output (json or csv)
+          required: true
+          schema:
+            type: string
+        - name: Content-Type
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+            default: application/json
+      responses:
+        '200':
+          description: ''
+        '500':
+          description: Generate a fitting description for the response
+          content:
+            application/json:
+              examples:
+                '500':
+                  summary: Generate a fitting summary for the response
+                  description: Generate a fitting description for the response
+                  value:
+                    Error: An internal server error has occured.
+  /novel_food_catalog_list:
+    get:
+      tags:
+        - hidden-configportal
+        - hidden-public
+      summary: novel_food_catalog_list
+      operationId: 4e3d834b-cfed-4ba8-89c7-a95608a2fdbc
+      parameters:
+        - name: format
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+        - name: novel_food_status
+          in: query
+          description: ''
+          schema:
+            type: string
+        - name: Content-Type
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+            default: application/json
+      responses:
+        '200':
+          description: ''
+        '500':
+          description: Generate a fitting description for the response
+          content:
+            application/json:
+              examples:
+                '500':
+                  summary: Generate a fitting summary for the response
+                  description: Generate a fitting description for the response
+                  value:
+                    Error: An internal server error has occured.
+  /novel_food_catalog_detail:
+    get:
+      tags:
+        - hidden-configportal
+        - hidden-public
+      summary: novel_food_catalog_detail
+      operationId: 2fceb7fd-23e0-40d0-938d-2de7e2b0455d
+      parameters:
+        - name: format
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+        - name: policy_item_id
+          in: query
+          description: ''
+          schema:
+            type: number
+        - name: policy_item_code
+          in: query
+          description: ''
+          schema:
+            type: string
+        - name: novel_food_name
+          in: query
+          description: ''
+          schema:
+            type: string
+        - name: Content-Type
+          in: header
+          description: ''
+          required: true
+          schema:
+            type: string
+            default: application/json
+      responses:
+        '200':
+          description: ''
+        '500':
+          description: Generate a fitting description for the response
+          content:
+            application/json:
+              examples:
+                '500':
+                  summary: Generate a fitting summary for the response
+                  description: Generate a fitting description for the response
+                  value:
+                    Error: An internal server error has occured.
+  /user_guide/download:
+    get:
+      summary: User Guide Download
+      description: User Guide Download
+      operationId: c726a295-5913-4ec1-84b9-3d72b2ec9174
+      responses:
+        '200':
+          description: OK
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+              examples:
+                default:
+                  value: 
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+components:
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      name: Ocp-Apim-Subscription-Key
+      in: header
+    apiKeyQuery:
+      type: apiKey
+      name: subscription-key
+      in: query
+security:
+  - apiKeyHeader: [ ]
+  - apiKeyQuery: [ ]
