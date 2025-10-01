@@ -1,6 +1,6 @@
+import customtkinter as ctk # CustomTkinter for modern UI
 import orjson # For faster JSON handling (needs to be imported)
 import time # Time keeping
-import customtkinter as ctk # CustomTkinter for modern UI
 
 from eunovelfoods import fetch_all_novel_foods, create_searchable_index, quick_search
 from app import NovelFoodSearch
