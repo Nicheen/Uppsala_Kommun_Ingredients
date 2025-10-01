@@ -1,60 +1,97 @@
 import { useState, useEffect } from 'react';
+import './App.css';
 
 function App() {
   const [novelFoods, setNovelFoods] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredResults, setFilteredResults] = useState([]);
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [pharmaceuticals, setPharmaceuticals] = useState([]);
+  const [ingredientsList, setIngredientsList] = useState('');
+  const [analyzedIngredients, setAnalyzedIngredients] = useState([]);
+  const [selectedIngredient, setSelectedIngredient] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Load the novel foods data
+  // Load both datasets
   useEffect(() => {
-    const loadNovelFoods = async () => {
+    const loadData = async () => {
       try {
-        // Replace with your actual file path
-        const response = await fetch('/novel_foods_catalogue.json');
-        const data = await response.json();
-        setNovelFoods(data);
+        const [novelResponse, pharmaResponse] = await Promise.all([
+          fetch('/novel_foods_catalogue.json'),
+          fetch('/pharmaceutical_data.json')
+        ]);
+
+        const novelData = await novelResponse.json();
+        const pharmaData = await pharmaResponse.json();
+
+        setNovelFoods(novelData);
+        setPharmaceuticals(pharmaData);
         setLoading(false);
       } catch (error) {
-        console.error('Error loading novel foods data:', error);
+        console.error('Error loading data:', error);
         setLoading(false);
       }
     };
-    
-    loadNovelFoods();
+
+    loadData();
   }, []);
 
-  // Filter and group results based on search
-  useEffect(() => {
-    if (searchTerm.trim() === '') {
-      setFilteredResults([]);
+  // Analyze ingredients when user enters them
+  const analyzeIngredients = () => {
+    if (ingredientsList.trim() === '') {
+      setAnalyzedIngredients([]);
       return;
     }
 
-    const results = novelFoods.filter(food => 
-      food.novel_food_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      (food.common_name && food.common_name.toLowerCase().includes(searchTerm.toLowerCase())) ||
-      (food.synonyms && food.synonyms.toLowerCase().includes(searchTerm.toLowerCase()))
-    );
-    
-    // Group by policy_item_code to consolidate duplicates
-    const grouped = results.reduce((acc, food) => {
-      const key = food.policy_item_code;
-      if (!acc[key]) {
-        acc[key] = {
-          ...food,
-          all_common_names: []
-        };
+    // Split by comma, semicolon, or newline
+    const ingredients = ingredientsList
+      .split(/[,;\n]/)
+      .map(ing => ing.trim())
+      .filter(ing => ing.length > 0);
+
+    const analyzed = ingredients.map(ingredient => {
+      const searchLower = ingredient.toLowerCase();
+
+      // Check if it's a novel food
+      const novelMatch = novelFoods.find(food =>
+        food.novel_food_name.toLowerCase() === searchLower ||
+        (food.common_name && food.common_name.toLowerCase() === searchLower) ||
+        (food.synonyms && food.synonyms.toLowerCase().includes(searchLower))
+      );
+
+      // Check if it's pharmaceutical
+      const pharmaMatch = pharmaceuticals.find(pharma =>
+        pharma.name.toLowerCase() === searchLower ||
+        (pharma.synonyms && pharma.synonyms.some(syn =>
+          syn.toLowerCase() === searchLower
+        ))
+      );
+
+      let status = 'safe'; // green
+      let statusText = 'No concerns';
+      let details = null;
+
+      if (pharmaMatch && pharmaMatch.is_medicine) {
+        status = 'danger'; // red
+        statusText = 'Pharmaceutical drug';
+        details = { source: 'pharmaceutical', data: pharmaMatch };
+      } else if (novelMatch) {
+        status = 'warning'; // orange
+        statusText = 'Novel Food';
+        details = { source: 'novel_food', data: novelMatch };
+      } else if (pharmaMatch) {
+        status = 'safe'; // green
+        statusText = 'Safe (not pharmaceutical)';
+        details = { source: 'pharmaceutical', data: pharmaMatch };
       }
-      if (food.common_name) {
-        acc[key].all_common_names.push(food.common_name);
-      }
-      return acc;
-    }, {});
-    
-    setFilteredResults(Object.values(grouped));
-  }, [searchTerm, novelFoods]);
+
+      return {
+        name: ingredient,
+        status,
+        statusText,
+        details
+      };
+    });
+
+    setAnalyzedIngredients(analyzed);
+  };
 
   const stripHtml = (html) => {
     const tmp = document.createElement('div');
@@ -63,135 +100,139 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
-      <div className="max-w-6xl mx-auto">
+    <div className="app-container">
+      <div className="max-width">
         {/* Header */}
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-6">
-          <h1 className="text-4xl font-bold text-indigo-900 mb-2">
-            EU Novel Foods Checker
-          </h1>
-          <p className="text-gray-600">
-            Search the EU Novel Foods Catalogue for compliance checking
+        <div className="card header">
+          <h1>Ingredient Safety Checker</h1>
+          <p>
+            Search the EU Novel Foods Catalogue and Pharmaceutical Database for compliance checking
           </p>
         </div>
 
-        {/* Search Box */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-          <label className="block text-sm font-semibold text-gray-700 mb-2">
-            Search Ingredient
+        {/* Ingredients Input */}
+        <div className="card">
+          <label className="label">
+            Enter Ingredients List
           </label>
-          <input
-            type="text"
-            placeholder="Enter ingredient name (e.g., DIM, spirulina)..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-indigo-500 focus:outline-none text-lg"
+          <textarea
+            placeholder="Paste ingredients list here... (e.g., NAC, Vitamin C, Spirulina, Melatonin)"
+            value={ingredientsList}
+            onChange={(e) => setIngredientsList(e.target.value)}
+            className="textarea"
           />
-          <div className="text-sm text-gray-500 mt-2">
-            {loading ? (
-              <span className="flex items-center gap-2">
-                <span className="animate-pulse">⏳</span> Loading database...
-              </span>
-            ) : (
-              <span>
-                <strong>{novelFoods.length}</strong> novel foods loaded in database
-                {novelFoods.length === 0 && (
-                  <span className="text-red-600 font-semibold"> - Check if file exists in /public folder!</span>
-                )}
-              </span>
-            )}
+          <div className="input-footer">
+            <div className="status-text">
+              {loading ? (
+                <span>⏳ Loading databases...</span>
+              ) : (
+                <span>
+                  <strong>{novelFoods.length}</strong> novel foods and <strong>{pharmaceuticals.length}</strong> pharmaceutical ingredients loaded
+                </span>
+              )}
+            </div>
+            <button
+              onClick={analyzeIngredients}
+              disabled={loading || !ingredientsList.trim()}
+              className="btn-analyze"
+            >
+              Analyze
+            </button>
           </div>
         </div>
 
         {/* Results */}
-        {searchTerm && (
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              Search Results ({filteredResults.length})
+        {analyzedIngredients.length > 0 && (
+          <div className="card">
+            <h2 className="results-header">
+              Analysis Results ({analyzedIngredients.length} ingredients)
             </h2>
-            
-            {filteredResults.length === 0 ? (
-              <div className="text-center py-8 text-gray-500">
-                <p className="text-lg">No novel foods found matching "{searchTerm}"</p>
-                <p className="text-sm mt-2">This ingredient may not be classified as a novel food</p>
-              </div>
-            ) : (
-              <div className="space-y-4">
-                {filteredResults.map((food) => (
-                  <div
-                    key={food.policy_item_id}
-                    className="border-2 border-gray-200 rounded-lg p-5 hover:border-indigo-400 hover:shadow-md transition-all cursor-pointer"
-                    onClick={() => setSelectedItem(selectedItem?.policy_item_id === food.policy_item_id ? null : food)}
-                  >
-                    <div className="flex justify-between items-start">
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-indigo-900 mb-2">
-                          {food.novel_food_display_name}
-                        </h3>
-                        <div className="flex gap-3 flex-wrap mb-2">
-                          <span className="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold px-3 py-1 rounded-full">
-                            {food.novel_food_status}
-                          </span>
-                          <span className="inline-block bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">
-                            {food.part_of_novel_food}
-                          </span>
-                          <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">
-                            {food.policy_item_code}
-                          </span>
-                        </div>
-                        {food.common_name && (
-                          <p className="text-sm text-gray-600 mb-1">
-                            <strong>Common name:</strong> {food.common_name}
-                          </p>
-                        )}
-                        {food.all_common_names && food.all_common_names.length > 0 && (
-                          <div className="text-sm text-gray-600 mb-1">
-                            <strong>Common names ({food.all_common_names.length} languages):</strong>
-                            <div className="mt-1 flex flex-wrap gap-1">
-                              {food.all_common_names.map((name, idx) => (
-                                <span 
-                                  key={idx}
-                                  className="inline-block bg-green-50 text-green-700 text-xs px-2 py-1 rounded"
-                                >
-                                  {name}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                        {food.synonyms && (
-                          <p className="text-sm text-gray-600">
-                            <strong>Synonyms:</strong> {food.synonyms}
-                          </p>
-                        )}
-                      </div>
-                      <button className="text-indigo-600 font-bold text-xl ml-4">
-                        {selectedItem?.policy_item_id === food.policy_item_id ? '−' : '+'}
-                      </button>
-                    </div>
 
-                    {/* Expanded Details */}
-                    {selectedItem?.policy_item_id === food.policy_item_id && (
-                      <div className="mt-4 pt-4 border-t-2 border-gray-200">
-                        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
-                          <h4 className="font-semibold text-yellow-900 mb-2">⚠️ Regulatory Status</h4>
-                          <p className="text-sm text-yellow-800">
-                            {stripHtml(food.novel_food_status_desc)}
-                          </p>
-                        </div>
-                        
-                        {food.description && (
-                          <div className="bg-gray-50 p-4 rounded">
-                            <h4 className="font-semibold text-gray-900 mb-2">Description</h4>
-                            <p className="text-sm text-gray-700">
-                              {stripHtml(food.description)}
-                            </p>
-                          </div>
-                        )}
-                      </div>
+            {/* Ingredients flow like text */}
+            <div className="ingredients-flow">
+              {analyzedIngredients.map((ingredient, idx) => (
+                <span key={idx}>
+                  <span
+                    className={`ingredient-badge ${
+                      ingredient.status === 'danger'
+                        ? 'ingredient-danger'
+                        : ingredient.status === 'warning'
+                        ? 'ingredient-warning'
+                        : 'ingredient-safe'
+                    }`}
+                    onClick={() => setSelectedIngredient(
+                      selectedIngredient === idx ? null : idx
                     )}
+                  >
+                    {ingredient.name}
+                  </span>
+                  {idx < analyzedIngredients.length - 1 && (
+                    <span className="comma">,</span>
+                  )}
+                </span>
+              ))}
+            </div>
+
+            {/* Details panel below */}
+            {selectedIngredient !== null && analyzedIngredients[selectedIngredient].details && (
+              <div className="details-panel">
+                <div className="details-header">
+                  <div className="details-title">
+                    <span className="details-icon">
+                      {analyzedIngredients[selectedIngredient].status === 'danger' ? '🔴' :
+                       analyzedIngredients[selectedIngredient].status === 'warning' ? '🟠' : '🟢'}
+                    </span>
+                    <h3>
+                      {analyzedIngredients[selectedIngredient].name}
+                    </h3>
                   </div>
-                ))}
+                  <button
+                    onClick={() => setSelectedIngredient(null)}
+                    className="btn-close"
+                  >
+                    ×
+                  </button>
+                </div>
+
+                <div className={`status-badge ${
+                  analyzedIngredients[selectedIngredient].status === 'danger'
+                    ? 'status-badge-danger'
+                    : analyzedIngredients[selectedIngredient].status === 'warning'
+                    ? 'status-badge-warning'
+                    : 'status-badge-safe'
+                }`}>
+                  {analyzedIngredients[selectedIngredient].statusText}
+                </div>
+
+                <div className="details-content">
+                  {analyzedIngredients[selectedIngredient].details.source === 'pharmaceutical' ? (
+                    <div>
+                      {analyzedIngredients[selectedIngredient].details.data.comment && (
+                        <p>
+                          {analyzedIngredients[selectedIngredient].details.data.comment}
+                        </p>
+                      )}
+                      {analyzedIngredients[selectedIngredient].details.data.synonyms &&
+                       analyzedIngredients[selectedIngredient].details.data.synonyms.length > 0 && (
+                        <p>
+                          <strong>Also known as:</strong> {analyzedIngredients[selectedIngredient].details.data.synonyms.slice(0, 5).join(', ')}
+                          {analyzedIngredients[selectedIngredient].details.data.synonyms.length > 5 && '...'}
+                        </p>
+                      )}
+                    </div>
+                  ) : (
+                    <div>
+                      <p>
+                        {stripHtml(analyzedIngredients[selectedIngredient].details.data.novel_food_status_desc)}
+                      </p>
+                      {analyzedIngredients[selectedIngredient].details.data.common_name && (
+                        <p>
+                          <strong>Common name:</strong> {analyzedIngredients[selectedIngredient].details.data.common_name}
+                        </p>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
             )}
           </div>

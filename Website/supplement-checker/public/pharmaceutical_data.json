@@ -1,0 +1,2070 @@
+[
+  {
+    "name": "5-HTP",
+    "synonyms": [
+      "Oxitriptan",
+      "5-Hydroxitryptofan"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "5-Hydroxitryptofan",
+    "synonyms": [
+      "Oxitriptan",
+      "5-HTP"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Acacia rigidula",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Acetylcystein",
+    "synonyms": [
+      "N-acetylcystein",
+      "NAC"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Acetylkarnitin",
+    "synonyms": [
+      "Pyridoxol",
+      "vitamin B6",
+      "Pyridoxin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Adrafinil",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Ämnet har funnits i läkemedel internationellt."
+  },
+  {
+    "name": "Aesculus hippocastanum",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": "Aloe-produkter som innehåller antraquinoner kan vara läkemedel, då dessa ämnen kan ha en laxerande effekt."
+  },
+  {
+    "name": "Althaea officinalis",
+    "synonyms": [
+      "Läkemalva"
+    ],
+    "is_medicine": null,
+    "comment": "Nej, produkten är vanligtvis inte ett läkemedel*"
+  },
+  {
+    "name": "Amacetam",
+    "synonyms": [
+      "Pramiracetam"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Amerikansk brakved",
+    "synonyms": [
+      "Cimicifuga recemosa",
+      "Läkesilverax"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Boldo",
+    "synonyms": [
+      "Hagtorn",
+      "Hawthorn"
+    ],
+    "is_medicine": true,
+    "comment": "Välkänd medicinalväxt vilken finns i läkemedel internationellt."
+  },
+  {
+    "name": "Cucurbita pepo",
+    "synonyms": [
+      "DHEA",
+      "prasteron"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Dinitrofenol",
+    "synonyms": [
+      "DNP"
+    ],
+    "is_medicine": true,
+    "comment": null
+  },
+  {
+    "name": "Devil's claw",
+    "synonyms": [
+      "Prasteron",
+      "dehydroepiandrosteron"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Dihydrotakisterol",
+    "synonyms": [
+      "Vitamin D"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Dijodtyronin",
+    "synonyms": [
+      "T2"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Dimetylaminoetanol",
+    "synonyms": [
+      "DMAE"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Djävulsklo",
+    "synonyms": [
+      "Harpagophytum procumbens",
+      "Devil's claw"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i registrerade traditionella växtbaserade läkemedel i Sverige"
+  },
+  {
+    "name": "DNP",
+    "synonyms": [
+      "Dinitrofenol"
+    ],
+    "is_medicine": true,
+    "comment": null
+  },
+  {
+    "name": "Echinacea augustifolia",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Växten finns i läkemedel internationellt."
+  },
+  {
+    "name": "Echinacea pallida",
+    "synonyms": [
+      "Röd solhatt",
+      "Purple coneflower"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Efedrin",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Ämnet finns i godkända läkemedel i Sverige."
+  },
+  {
+    "name": "Elder",
+    "synonyms": [
+      "Fläder",
+      "Sambucus nigra"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Eleutherococcus senticosus",
+    "synonyms": [
+      "Sibirisk ginseng",
+      "rysk rot"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Enobosarm",
+    "synonyms": [
+      "Ostarine",
+      "gtx-024"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet ingår i forskningsprogram för att utveckla läkemedel."
+  },
+  {
+    "name": "Ephedra",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Gäller flera arter."
+  },
+  {
+    "name": "Epimedium grandiflorum",
+    "synonyms": [
+      "Horny goat weed"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Eyebright",
+    "synonyms": [
+      "Euphrasia officinalis",
+      "ögontröst"
+    ],
+    "is_medicine": false,
+    "comment": "Produkten kan vara läkemedel om den är i form av ögondroppar."
+  },
+  {
+    "name": "Ergokalciferol",
+    "synonyms": [
+      "Vitamin D2",
+      "kalciferol"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Eschscholzia californica",
+    "synonyms": [
+      "Ögontröst",
+      "eyebright"
+    ],
+    "is_medicine": false,
+    "comment": "Produkten kan vara läkemedel om den är i form av ögondroppar."
+  },
+  {
+    "name": "Fenfluramin",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Ämnet har funnits i godkänt läkemedel internationellt."
+  },
+  {
+    "name": "Fenibut",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Fenylalanin",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Fenetylamin",
+    "synonyms": [
+      "Fenyletylamin",
+      "PEA"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Fenolftalein",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Fenyletylamin",
+    "synonyms": [
+      "Fenetylamin",
+      "PEA"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Fenylpiracetam",
+    "synonyms": [
+      "Fonturacetam"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Feverfew",
+    "synonyms": [
+      "Mattram",
+      "Tanacetum parthenium"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i registrerade traditionella växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Fjällkvanne",
+    "synonyms": [
+      "Angelica archangelica"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Fjärilsranka",
+    "synonyms": [
+      "Schisandra chinensis"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Flibanserin",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": null
+  },
+  {
+    "name": "Ämnet finns i läkemedel internationellt.",
+    "synonyms": [
+      "Sambucus nigra",
+      "elder"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Folsyra",
+    "synonyms": [
+      "Vitamin B9"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Fonturacetam",
+    "synonyms": [
+      "Fenylpiracetam"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Forskolin",
+    "synonyms": [
+      "Colforsin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Frangula alnus",
+    "synonyms": [
+      "Brakved"
+    ],
+    "is_medicine": true,
+    "comment": null
+  },
+  {
+    "name": "Välkänd medicinalväxt vilken finns i läkemedel internationellt.",
+    "synonyms": [
+      "Cascara sagrada",
+      "amerikansk brakved"
+    ],
+    "is_medicine": true,
+    "comment": "Välkänd medicinalväxt vilken finns i läkemedel internationellt."
+  },
+  {
+    "name": "Fytomenadion",
+    "synonyms": [
+      "Vitamin K1"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "GABA",
+    "synonyms": [
+      "Gamma-aminosmörsyra"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Gamma-aminosmörsyra",
+    "synonyms": [
+      "GABA"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Ganoderma lucidum",
+    "synonyms": [
+      "Reishi"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Gentiana lutea",
+    "synonyms": [
+      "Gullgentiana"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Ginkgo biloba",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Växten finns i registrerade traditionella växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Ginseng",
+    "synonyms": [
+      "Panax ginseng"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Glukosamin",
+    "synonyms": [
+      "Humulus lupus"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Humulus lupus",
+    "synonyms": [
+      "Humle"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Huperzin A",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Hydroxiefedrin",
+    "synonyms": [
+      "Oxilofrin",
+      "metylsynefrin"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Hypericum perforatum",
+    "synonyms": [
+      "Johannesört",
+      "St. John's wort"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Hästkastanj",
+    "synonyms": [
+      "Aesculus hippocastanum",
+      "horse-chestnut"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Iberis amara",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Inonotus obliquus",
+    "synonyms": [
+      "Sprängticka",
+      "chaga"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Inositolnikotinat",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Islandslav",
+    "synonyms": [
+      "Cetraria islandica"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Isoamylnitrit",
+    "synonyms": [
+      "Isopentylnitrit"
+    ],
+    "is_medicine": true,
+    "comment": "Regleras av LVFS 2011:15."
+  },
+  {
+    "name": "Isobutylnitrit",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Regleras av LVFS 2011:15."
+  },
+  {
+    "name": "Isoleucin",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Isopentylnitrit",
+    "synonyms": [
+      "Isoamylnitrit"
+    ],
+    "is_medicine": true,
+    "comment": "Regleras av LVFS 2011:15."
+  },
+  {
+    "name": "Ivy",
+    "synonyms": [
+      "Murgröna",
+      "Hedera helix"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Johannesört",
+    "synonyms": [
+      "St. John's wort",
+      "Hypericum perforatum"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Justicia adhatoda",
+    "synonyms": [
+      "Malabarnöt"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i registrerade traditionella växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Järnört",
+    "synonyms": [
+      "Verbena officinalis"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Kalciferol",
+    "synonyms": [
+      "Vitamin D2",
+      "ergokalciferol"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Kamomill",
+    "synonyms": [
+      "Matricaria recutita"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Kattklo",
+    "synonyms": [
+      "Uncaria tomentosa"
+    ],
+    "is_medicine": true,
+    "comment": "Välkänd medicinalväxt vilken finns i läkemedel internationellt."
+  },
+  {
+    "name": "Kava-kava",
+    "synonyms": [
+      "Piper methysticum"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet har funnits som aktiv substans i läkemedel inom EU. Läkemedlet har dragits in på grund av fall av leverskador."
+  },
+  {
+    "name": "Kinakvanne",
+    "synonyms": [
+      "Angelica sinensis"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Koffein",
+    "synonyms": [
+      "Tein",
+      "guaranin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Kolekalciferol",
+    "synonyms": [
+      "Vitamin D3"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Kolinalfoscerat",
+    "synonyms": [
+      "Alfa-GPC"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Korallticka",
+    "synonyms": [
+      "Maitake",
+      "Grifola frondosa"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Kreatin",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Kronärtskocka",
+    "synonyms": [
+      "Cynara scolymus"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Kryddsalvia",
+    "synonyms": [
+      "Salvia officinalis",
+      "sage"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Kryddtimjan",
+    "synonyms": [
+      "Thymus vulgaris"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Kummin",
+    "synonyms": [
+      "Carum carvi"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Lakritsrot",
+    "synonyms": [
+      "Glycyrrhiza glabra"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Laktoflavin",
+    "synonyms": [
+      "Vitamin B2",
+      "riboflavin",
+      "laktokrom"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Laktokrom",
+    "synonyms": [
+      "Vitamin B2",
+      "riboflavin",
+      "laktoflavin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Lapacho",
+    "synonyms": [
+      "Pau d'arco"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Lavendel",
+    "synonyms": [
+      "Lavendula angustifolia"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Lavendula angustifolia",
+    "synonyms": [
+      "Lavendel"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Leucin",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "LGD-4033",
+    "synonyms": [
+      "Ligandrol",
+      "VK5211"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet ingår i forskningsprogram för att utveckla läkemedel."
+  },
+  {
+    "name": "Ligandrol",
+    "synonyms": [
+      "LGD-4033",
+      "VK5211"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet ingår i forskningsprogram för att utveckla läkemedel."
+  },
+  {
+    "name": "Litiumorotat",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Litium finns i godkända läkemedel i Sverige."
+  },
+  {
+    "name": "Lysin",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Läkemalva",
+    "synonyms": [
+      "Althaea officinalis"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Läkepassionsblomma",
+    "synonyms": [
+      "Passiflora incarnata",
+      "passion flower"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i registrerade traditionella växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Läkesilverax",
+    "synonyms": [
+      "Cimicifuga racemosa",
+      "black cohosh"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Maitake",
+    "synonyms": [
+      "Grifola frondosa",
+      "korallticka"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Malabarnöt",
+    "synonyms": [
+      "Justicia adhatoda"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i registrerade traditionella växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Mariatistel",
+    "synonyms": [
+      "Silybum marianum",
+      "milk-thistle"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i läkemedel internationellt och används medicinskt i Sverige."
+  },
+  {
+    "name": "Maskros",
+    "synonyms": [
+      "Taraxacum officinale",
+      "dandelion"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Matricaria recutita",
+    "synonyms": [
+      "Kamomill"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Mattram",
+    "synonyms": [
+      "Feverfew",
+      "Tanacetum parthenium"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i registrerade traditionella växtbaserade läkemedel i Sverige"
+  },
+  {
+    "name": "Melanotan",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Avser melanotan II. Produkterna injiceras vanligtvis och regleras då av LVFS 2011:15."
+  },
+  {
+    "name": "Melatonin",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Finns i godkända läkemedel i Sverige."
+  },
+  {
+    "name": "Melissa officinalis",
+    "synonyms": [
+      "Citronmeliss"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Menadion",
+    "synonyms": [
+      "Vitamin K3"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Mentha piperita",
+    "synonyms": [
+      "Pepparmynta"
+    ],
+    "is_medicine": false,
+    "comment": "Kan vara läkemedel om för utvärtes bruk."
+  },
+  {
+    "name": "Metionin",
+    "synonyms": [
+      "β-Metylfenetylamin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "β-Metylfenetylamin",
+    "synonyms": [
+      "β-Me-PEA"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Metylsynefrin",
+    "synonyms": [
+      "Oxilofrin",
+      "hydroxiefedrin"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Milk-thistle",
+    "synonyms": [
+      "Mariatistel",
+      "Silybum marianum"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i läkemedel internationellt och används medicinskt i Sverige."
+  },
+  {
+    "name": "Mjölon",
+    "synonyms": [
+      "Arctostaphylos uva-ursi",
+      "Uvae ursi"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Monakolin K",
+    "synonyms": [
+      "Rött ris"
+    ],
+    "is_medicine": true,
+    "comment": "Fermenterat rött ris kan i vissa fall innehålla förhöjda halter av ämnet monakolin K. Monakolin K finns i läkemedel internationellt."
+  },
+  {
+    "name": "Moringa oleifera",
+    "synonyms": [
+      "Pepparrotsträd",
+      "Horseradish tree"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Mucuna pruriens",
+    "synonyms": [
+      "Sammetsböna",
+      "velvet bean"
+    ],
+    "is_medicine": true,
+    "comment": "Växten innehåller levodopa. Levodopa finns i läkemedel i Sverige."
+  },
+  {
+    "name": "Munkpeppar",
+    "synonyms": [
+      "Vitex agnus-castus",
+      "Agnus castus"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Murgröna",
+    "synonyms": [
+      "Hedera helix",
+      "Ivy"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Mörk pelargon",
+    "synonyms": [
+      "Pelargonium sidoides"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i läkemedel internationellt."
+  },
+  {
+    "name": "NAC",
+    "synonyms": [
+      "Acetylcystein",
+      "N-acetylcystein"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "N-acetylcystein",
+    "synonyms": [
+      "Acetylcystein",
+      "NAC"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Nafazolin",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Finns i godkänt läkemedel i Sverige."
+  },
+  {
+    "name": "Niacin",
+    "synonyms": [
+      "Vitamin B3",
+      "nikotinsyra"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Nikotinsyra",
+    "synonyms": [
+      "Vitamin B3",
+      "niacin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Nikotinoyl-GABA",
+    "synonyms": [
+      "Pikamilon"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Noopept",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Norsynefrin",
+    "synonyms": [
+      "Oktopamin"
+    ],
+    "is_medicine": false,
+    "comment": "Avser p-oktopamin."
+  },
+  {
+    "name": "Oktopamin",
+    "synonyms": [
+      "Norsynefrin"
+    ],
+    "is_medicine": false,
+    "comment": "Avser p-oktopamin."
+  },
+  {
+    "name": "Oleamid",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Ostarine",
+    "synonyms": [
+      "Enobosarm",
+      "gtx-024"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet ingår i forskningsprogram för att utveckla läkemedel."
+  },
+  {
+    "name": "Oxedrin",
+    "synonyms": [
+      "Synefrin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Oxilofrin",
+    "synonyms": [
+      "Metylsynefrin",
+      "hydroxiefedrin"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Oxiracetam",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Oxitriptan",
+    "synonyms": [
+      "5-HTP",
+      "5-hydroxitryptofan"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Panax ginseng",
+    "synonyms": [
+      "Ginseng"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Pantotensyra",
+    "synonyms": [
+      "Vitamin B5"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Passiflora incarnata",
+    "synonyms": [
+      "Läkepassionsblomma",
+      "passion flower"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i registrerade traditionella växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Passion flower",
+    "synonyms": [
+      "Passionsblomma",
+      "Läkepassionsblomma",
+      "Passiflora incarnata"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i registrerade traditionella växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Passionsblomma",
+    "synonyms": [
+      "Läkepassionsblomma",
+      "passion flower Passiflora incarnata"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i registrerade traditionella växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Pau d'arco",
+    "synonyms": [
+      "Lapacho"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "PEA",
+    "synonyms": [
+      "Fenetylamin",
+      "fenyletylamin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Pelargonium sidoides",
+    "synonyms": [
+      "Mörk pelargon"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i läkemedel internationellt."
+  },
+  {
+    "name": "Pepparmynta",
+    "synonyms": [
+      "Mentha piperita"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Pepparrotsträd",
+    "synonyms": [
+      "Moringa oleifera",
+      "Horseradish tree"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Peumus boldus",
+    "synonyms": [
+      "Boldo"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i registrerade traditionella växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Pikamilon",
+    "synonyms": [
+      "Nikotinoyl-GABA"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Piper methysticum",
+    "synonyms": [
+      "Kava-kava"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet har funnits som aktiv substans i läkemedel inom EU. Läkemedlen har dragits in p.g.a. fall av leverskador."
+  },
+  {
+    "name": "Piracetam",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Ämnet finns som aktiv substans i flera godkända läkemedel i Sverige."
+  },
+  {
+    "name": "Plantago ovata",
+    "synonyms": [
+      "Loppfrö"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Plectranthus barbatus",
+    "synonyms": [
+      "Coleus forskohlii"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Pomerans",
+    "synonyms": [
+      "Citrus aurantium",
+      "bitter-orange"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Pramiracetam",
+    "synonyms": [
+      "Amacetam"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Prasteron",
+    "synonyms": [
+      "DHEA",
+      "dehydroepiandrosteron"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Primula veris",
+    "synonyms": [
+      "Gullviva",
+      "Cowslip"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Prolin",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Pumpa",
+    "synonyms": [
+      "Cucurbita pepo"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Purple clover",
+    "synonyms": [
+      "Trifolium pratense",
+      "rödklöver"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Purple coneflower",
+    "synonyms": [
+      "Röd solhatt",
+      "Echinacea purpurea"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Pyridoxin",
+    "synonyms": [
+      "Pyridoxol",
+      "vitamin B6",
+      "adermin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Pyridoxol",
+    "synonyms": [
+      "Pyridoxin",
+      "vitamin B6",
+      "adermin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "RAD140",
+    "synonyms": [
+      "Testolone"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet ingår i forskningsprogram för att utveckla läkemedel."
+  },
+  {
+    "name": "Rauvolfia",
+    "synonyms": [
+      "Testolone"
+    ],
+    "is_medicine": true,
+    "comment": "Innehåller bland annat det aktiva ämnet reserpin, vilket finns som godkänt läkemedel internationellt. Rauvolfia har en välkänd medicinsk användning."
+  },
+  {
+    "name": "Reishi",
+    "synonyms": [
+      "Ganoderma lucidum"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Retinol",
+    "synonyms": [
+      "Vitamin A"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Rhodiola rosea",
+    "synonyms": [
+      "Rosenrot"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Riboflavin",
+    "synonyms": [
+      "Vitamin B2",
+      "laktokrom",
+      "laktoflavin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Rosenrot",
+    "synonyms": [
+      "Rhodiola rosea"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Rosmarin",
+    "synonyms": [
+      "Rosmarinus officinalis"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Rosmarinus officinalis",
+    "synonyms": [
+      "Rosmarin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Rysk rot",
+    "synonyms": [
+      "Eleutherococcus senticosus",
+      "sibirisk ginseng"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Rödklöver",
+    "synonyms": [
+      "Trifolium pratense",
+      "purple clover"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Röd solhatt",
+    "synonyms": [
+      "Echinacea purpurea",
+      "Purple coneflower"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Rött ris",
+    "synonyms": [
+      "Monakolin K"
+    ],
+    "is_medicine": true,
+    "comment": "Fermenterat rött ris kan i vissa fall innehålla förhöjda halter av ämnet monakolin K. Monakolin K finns i läkemedel internationellt."
+  },
+  {
+    "name": "Sage",
+    "synonyms": [
+      "Kryddsalvia",
+      "Salvia officinalis"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Salix alba",
+    "synonyms": [
+      "Vitpil"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i växtbaserade läkemedel internationellt."
+  },
+  {
+    "name": "Salvia officinalis",
+    "synonyms": [
+      "Kryddsalvia",
+      "sage"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Sambucus nigra",
+    "synonyms": [
+      "Fläder",
+      "elder"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Sammetsböna",
+    "synonyms": [
+      "Mucuna pruriens",
+      "velvet bean"
+    ],
+    "is_medicine": true,
+    "comment": "Växten innehåller levodopa. Levodopa finns i läkemedel i Sverige."
+  },
+  {
+    "name": "Saw palmetto",
+    "synonyms": [
+      "Serenoa repens",
+      "sågpalmetto"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Schisandra chinensis",
+    "synonyms": [
+      "Fjärilsranka"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Senna",
+    "synonyms": [
+      "Cassia senna",
+      "Cassia angustifolia"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Serenoa repens",
+    "synonyms": [
+      "Sågpalmetto",
+      "saw palmetto"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Serin",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Sibirisk ginseng",
+    "synonyms": [
+      "Eleutherococcus senticosus",
+      "rysk rot"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Silybum marianum",
+    "synonyms": [
+      "Mariatistel",
+      "milk-thistle"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i läkemedel internationellt och används medicinskt i Sverige."
+  },
+  {
+    "name": "Skelört",
+    "synonyms": [
+      "Chelidonium majus"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i registrerade traditionella växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Sköldkörtel",
+    "synonyms": [
+      "Tyreoidea",
+      "thyroid"
+    ],
+    "is_medicine": true,
+    "comment": "Innehåller sköldkörtelhormon vilket finns i läkemedel i Sverige."
+  },
+  {
+    "name": "Sprängticka",
+    "synonyms": [
+      "Chaga",
+      "Inonotus oliquus"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "St. Johns wort",
+    "synonyms": [
+      "Hypericum perforatum",
+      "Johannesört"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Sunifiram",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Synefrin",
+    "synonyms": [
+      "Oxedrin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Sågpalmetto",
+    "synonyms": [
+      "Serenoa repens",
+      "saw palmetto"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Sömntuta",
+    "synonyms": [
+      "Dijodtyronin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Tanacetum parthenium",
+    "synonyms": [
+      "Mattram",
+      "Feverfew"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i registrerade traditionella växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Taraxacum officinale",
+    "synonyms": [
+      "Maskros",
+      "dandelion"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Tauroursodeoxicholsyra",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Tein",
+    "synonyms": [
+      "Koffein",
+      "guaranin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Testolone",
+    "synonyms": [
+      "RAD140"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet ingår i forskningsprogram för att utveckla läkemedel."
+  },
+  {
+    "name": "Thymus vulgaris",
+    "synonyms": [
+      "Kryddtimjan"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Tiamin",
+    "synonyms": [
+      "Vitamin B1"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Tianeptin",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Tiggarnöt",
+    "synonyms": [
+      "Tribulus terrestis"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Tokoferol",
+    "synonyms": [
+      "Vitamin E"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Treonin",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Tribulus terrestis",
+    "synonyms": [
+      "Tiggarnöt"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Trifolium pratense",
+    "synonyms": [
+      "Rödklöver",
+      "purple clover"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Tryptofan",
+    "synonyms": [
+      "Sköldkörtel",
+      "thyroid"
+    ],
+    "is_medicine": true,
+    "comment": "Innehåller sköldkörtelhormon vilket finns i läkemedel i Sverige."
+  },
+  {
+    "name": "Thyroid",
+    "synonyms": [
+      "Sköldkörtel",
+      "thyroid"
+    ],
+    "is_medicine": true,
+    "comment": "Innehåller sköldkörtelhormon vilket finns i läkemedel i Sverige."
+  },
+  {
+    "name": "Tyrosin",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Ubidekarenon",
+    "synonyms": [
+      "Coenzym Q10",
+      "Vitamin Q",
+      "ubikinon 50"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Ubikinon 50",
+    "synonyms": [
+      "Ubidekarenon",
+      "coenzym Q10",
+      "vitamin Q"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Uncaria tomentosa",
+    "synonyms": [
+      "Kattklo"
+    ],
+    "is_medicine": true,
+    "comment": "Välkänd medicinalväxt vilken finns i läkemedel internationellt."
+  },
+  {
+    "name": "Unifiram",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Urtica dioica",
+    "synonyms": [
+      "Brännässla"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Uvae ursi",
+    "synonyms": [
+      "Arctostaphylos uva-ursi",
+      "Mjölon"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vaccinium macrocarpon",
+    "synonyms": [
+      "Amerikanskt tranbär"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Valeriana officinalis",
+    "synonyms": [
+      "Vänderot"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Valin",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Velvet bean",
+    "synonyms": [
+      "Sammetsböna",
+      "Mucuna pruriens"
+    ],
+    "is_medicine": true,
+    "comment": "Växten innehåller levodopa. Levodopa finns i läkemedel i Sverige."
+  },
+  {
+    "name": "Verbena officinalis",
+    "synonyms": [
+      "Järnört"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Vinpocetin",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Vinranka",
+    "synonyms": [
+      "Vitis vinifera"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin A",
+    "synonyms": [
+      "Retinol"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin B1",
+    "synonyms": [
+      "Tiamin",
+      "aneurin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin B12",
+    "synonyms": [
+      "Cyanokobalamin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin B2",
+    "synonyms": [
+      "Riboflavin",
+      "laktokrom",
+      "laktoflavin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin B3",
+    "synonyms": [
+      "Nikotinsyra",
+      "niacin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin B5",
+    "synonyms": [
+      "Pantotensyra"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin B6",
+    "synonyms": [
+      "Pyridoxin",
+      "pyridoxol",
+      "adermin"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin B7",
+    "synonyms": [
+      "Biotin",
+      "Vitamin H"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin B9",
+    "synonyms": [
+      "Folsyra"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin C",
+    "synonyms": [
+      "Askorbinsyra"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin D",
+    "synonyms": [
+      "Dihydrotakisterol"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin D2",
+    "synonyms": [
+      "Ergokalciferol",
+      "kalciferol"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin D3",
+    "synonyms": [
+      "Kolekalciferol"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin E",
+    "synonyms": [
+      "Tokoferol"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin H",
+    "synonyms": [
+      "Biotin",
+      "vitamin B7"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin K",
+    "synonyms": [],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin K1",
+    "synonyms": [
+      "Fytomenadion"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin K3",
+    "synonyms": [
+      "Menadion"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitamin Q",
+    "synonyms": [
+      "Ubidekarenon",
+      "coenzym Q10",
+      "ubikinon 50"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitex agnus-castus",
+    "synonyms": [
+      "Agnus castus",
+      "munkpeppar"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Vitis vinifera",
+    "synonyms": [
+      "Vinranka"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitlök",
+    "synonyms": [
+      "Allium sativum"
+    ],
+    "is_medicine": false,
+    "comment": null
+  },
+  {
+    "name": "Vitpil",
+    "synonyms": [
+      "Salix alba"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i växtbaserade läkemedel internationellt."
+  },
+  {
+    "name": "VK5211",
+    "synonyms": [
+      "Ligandrol",
+      "LGD-4033"
+    ],
+    "is_medicine": true,
+    "comment": "Ämnet ingår i forskningsprogram för att utveckla läkemedel."
+  },
+  {
+    "name": "Vänderot",
+    "synonyms": [
+      "Valeriana officinalis"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i godkända växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Wild indigo",
+    "synonyms": [
+      "Baptisia tinctoria",
+      "gul färgväppling"
+    ],
+    "is_medicine": true,
+    "comment": "Växten finns i registrerade traditionella växtbaserade läkemedel i Sverige."
+  },
+  {
+    "name": "Withania somnifera",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Yohimbin",
+    "synonyms": [],
+    "is_medicine": true,
+    "comment": "Ämnet finns i läkemedel internationellt."
+  },
+  {
+    "name": "Ögontröst",
+    "synonyms": [
+      "Eyebright",
+      "Euphrasia officinalis"
+    ],
+    "is_medicine": false,
+    "comment": "Produkten kan vara läkemedel om den är i form av ögondroppar."
+  }
+]
