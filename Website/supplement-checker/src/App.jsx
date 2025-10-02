@@ -48,9 +48,10 @@ function App() {
   useEffect(() => {
     const loadData = async () => {
       try {
+        const base = import.meta.env.BASE_URL;
         const [novelResponse, pharmaResponse] = await Promise.all([
-          fetch('/novel_foods_catalogue.json'),
-          fetch('/pharmaceutical_data.json')
+          fetch(`${base}novel_foods_catalogue.json`),
+          fetch(`${base}pharmaceutical_data.json`)
         ]);
 
         // Check if responses are ok
