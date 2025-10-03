@@ -1,5 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import './App.css';
+import AuthModal from './components/AuthModal';
+import ManualLabelModal from './components/ManualLabelModal';
+import ManualLabelsDisplay from './components/ManualLabelsDisplay';
+import { supabase, getCurrentUser, signOut, getManualLabels } from './supabaseClient';
 
 function App() {
   const [novelFoods, setNovelFoods] = useState([]);
@@ -14,6 +18,12 @@ function App() {
   const [pharmaMap, setPharmaMap] = useState(null);
   const [loadError, setLoadError] = useState(null);
   const searchCacheRef = useRef(new Map());
+  const [user, setUser] = useState(null);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [showLabelModal, setShowLabelModal] = useState(false);
+  const [labelingIngredient, setLabelingIngredient] = useState(null);
+  const [editingLabel, setEditingLabel] = useState(null);
+  const [manualLabelsCache, setManualLabelsCache] = useState(new Map());
 
   // Common safe minerals/vitamins that may not be in the pharmaceutical database
   // but are standard approved nutritional ingredients
@@ -43,6 +53,69 @@ function App() {
     // Set height to scrollHeight to fit content
     e.target.style.height = e.target.scrollHeight + 'px';
   };
+
+  // Check for user session
+  useEffect(() => {
+    getCurrentUser().then(user => {
+      setUser(user)
+    })
+
+    const { data: authListener } = supabase.auth.onAuthStateChange(
+      async (event, session) => {
+        setUser(session?.user ?? null)
+      }
+    )
+
+    return () => {
+      authListener?.subscription?.unsubscribe()
+    }
+  }, [])
+
+  // Load manual labels for an ingredient
+  const loadManualLabelsForIngredient = async (ingredientName) => {
+    const normalizedName = ingredientName.toLowerCase().trim()
+    if (manualLabelsCache.has(normalizedName)) {
+      return manualLabelsCache.get(normalizedName)
+    }
+
+    const labels = await getManualLabels(ingredientName)
+    setManualLabelsCache(prev => new Map(prev).set(normalizedName, labels))
+    return labels
+  }
+
+  // Handle creating a label
+  const handleCreateLabel = (ingredient) => {
+    if (!user) {
+      setShowAuthModal(true)
+      return
+    }
+    setLabelingIngredient(ingredient)
+    setEditingLabel(null)
+    setShowLabelModal(true)
+  }
+
+  // Handle editing a label
+  const handleEditLabel = (label, ingredient) => {
+    if (!user) {
+      setShowAuthModal(true)
+      return
+    }
+    setLabelingIngredient(ingredient)
+    setEditingLabel(label)
+    setShowLabelModal(true)
+  }
+
+  const handleLabelSuccess = async () => {
+    // Refresh manual labels for this ingredient
+    if (labelingIngredient) {
+      const normalizedName = labelingIngredient.name.toLowerCase().trim()
+      const labels = await getManualLabels(labelingIngredient.name)
+      setManualLabelsCache(prev => new Map(prev).set(normalizedName, labels))
+
+      // Re-analyze to update the display
+      analyzeIngredients()
+    }
+  }
 
   // Load both datasets
   useEffect(() => {
@@ -179,7 +252,7 @@ function App() {
   }, []);
 
   // Analyze ingredients when user enters them
-  const analyzeIngredients = () => {
+  const analyzeIngredients = async () => {
     if (ingredientsList.trim() === '') {
       setAnalyzedIngredients([]);
       setAnalysisTime(null);
@@ -225,7 +298,7 @@ function App() {
       ingredients.push(current.trim());
     }
 
-    const analyzed = ingredients.map(ingredient => {
+    const analyzed = await Promise.all(ingredients.map(async ingredient => {
       // Parse ingredient to extract main name and parenthetical name
       const match = ingredient.match(/^([^(]+)(?:\(([^)]+)\))?/);
       const mainName = match ? match[1].trim() : ingredient;
@@ -335,10 +408,16 @@ function App() {
         searchCacheRef.current.set(cacheKey, cacheEntry);
       });
 
+      // Check for manual labels
+      const manualLabels = await loadManualLabelsForIngredient(ingredient)
+      const topLabel = manualLabels.length > 0 ? manualLabels[0] : null
+      const hasManualLabel = manualLabels.length > 0;
+
       // Determine overall status based on flowchart logic:
       // 1. Check Substance Guide (pharma) - if medicine → NOT APPROVED
       // 2. If Substance Guide OK → Check Novel Food - if found → NOT APPROVED
       // 3. If both OK (pharma approved + no novel food) → APPROVED
+      // 4. If no database info, use top-voted community label if available
       let status = 'unknown';
       let statusText = 'No information';
       let details = null;
@@ -389,14 +468,31 @@ function App() {
           primaryMatch: allMatches.novel[0]
         };
       }
+      else if (topLabel) {
+        // No database information, but we have a community label
+        // Use the top-voted label's status
+        status = topLabel.status;
+        statusText = topLabel.status === 'safe'
+          ? 'Approved (Community Label)'
+          : topLabel.status === 'danger'
+            ? 'Non-Approved (Community Label)'
+            : 'Unknown (Community Label)';
+        details = {
+          source: 'community',
+          topLabel
+        };
+      }
 
       return {
         name: ingredient,
         status,
         statusText,
-        details
+        details,
+        hasManualLabel,
+        manualLabels,
+        topLabel
       };
-    });
+    }));
 
     const endTime = performance.now();
     const timeTaken = ((endTime - startTime) / 1000).toFixed(3); // Convert to seconds
@@ -424,13 +520,36 @@ function App() {
                 Search the EU Novel Foods Catalogue and Pharmaceutical Database for compliance checking
               </p>
             </div>
-            <button
-              className="help-button"
-              onClick={() => setShowHelp(true)}
-              title="Help - Color Guide"
-            >
-              ?
-            </button>
+            <div className="header-actions">
+              {user ? (
+                <div className="user-info">
+                  <span className="user-email">{user.email}</span>
+                  <button
+                    className="btn-logout"
+                    onClick={async () => {
+                      await signOut()
+                      setUser(null)
+                    }}
+                  >
+                    Sign Out
+                  </button>
+                </div>
+              ) : (
+                <button
+                  className="btn-login"
+                  onClick={() => setShowAuthModal(true)}
+                >
+                  Sign In
+                </button>
+              )}
+              <button
+                className="help-button"
+                onClick={() => setShowHelp(true)}
+                title="Help - Color Guide"
+              >
+                ?
+              </button>
+            </div>
           </div>
         </div>
 
@@ -587,6 +706,11 @@ function App() {
                     )}
                   >
                     {ingredient.name}
+                    {ingredient.hasManualLabel && (
+                      <span className="manual-label-indicator" title="Has community labels">
+                        👥
+                      </span>
+                    )}
                   </span>
                   {idx < analyzedIngredients.length - 1 && (
                     <span className="comma">,</span>
@@ -745,10 +869,60 @@ function App() {
                       </div>
                     )}
                   </div>
+
+                  {/* Manual Labels Section */}
+                  <ManualLabelsDisplay
+                    labels={analyzedIngredients[selectedIngredient].manualLabels}
+                    user={user}
+                    onVoteUpdate={async () => {
+                      // Refresh manual labels
+                      const labels = await getManualLabels(analyzedIngredients[selectedIngredient].name)
+                      const normalizedName = analyzedIngredients[selectedIngredient].name.toLowerCase().trim()
+                      setManualLabelsCache(prev => new Map(prev).set(normalizedName, labels))
+                      analyzeIngredients()
+                    }}
+                    onEditLabel={(label) => handleEditLabel(label, analyzedIngredients[selectedIngredient])}
+                  />
+
+                  {/* Add Label Button */}
+                  <div className="add-label-section">
+                    <button
+                      className="btn-add-label"
+                      onClick={() => handleCreateLabel(analyzedIngredients[selectedIngredient])}
+                    >
+                      + Add Community Label
+                    </button>
+                    {!user && (
+                      <p className="label-hint">Sign in to add labels and vote</p>
+                    )}
+                  </div>
                 </div>
               </div>
             )}
           </div>
+        )}
+
+        {/* Auth Modal */}
+        {showAuthModal && (
+          <AuthModal
+            onClose={() => setShowAuthModal(false)}
+            onSuccess={(user) => setUser(user)}
+          />
+        )}
+
+        {/* Manual Label Modal */}
+        {showLabelModal && labelingIngredient && (
+          <ManualLabelModal
+            ingredient={labelingIngredient}
+            user={user}
+            existingLabel={editingLabel}
+            onClose={() => {
+              setShowLabelModal(false)
+              setLabelingIngredient(null)
+              setEditingLabel(null)
+            }}
+            onSuccess={handleLabelSuccess}
+          />
         )}
       </div>
     </div>
