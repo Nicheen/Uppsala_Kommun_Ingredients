@@ -259,6 +259,26 @@ function App() {
       setSelectedIngredient(null); // Clear selection when clearing results
       return;
     }
+    try {
+    const response = await fetch('http://localhost:5000/translate', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ text: ingredientsList }),
+    });
+
+    const data = await response.json();
+
+    if (data.translatedText) {
+      // Here you can use the translated text however you need
+      setAnalyzedIngredients([data.translatedText]);
+    } else {
+      console.error("No translated text received");
+    }
+  } catch (error) {
+    console.error("Error calling backend:", error);
+  }
 
     // Clear selected ingredient when re-analyzing
     setSelectedIngredient(null);
